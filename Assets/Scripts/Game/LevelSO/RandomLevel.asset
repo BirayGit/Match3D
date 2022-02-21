@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e748ff2b6db3210408fc7492dcbc0ac3, type: 3}
+  m_Name: RandomLevel
+  m_EditorClassIdentifier: 
+  levelTime: 120
+  maxItems: 30
+  hasBomb: 0
+  spriteType:
+  - {fileID: 11400000, guid: 3bae659911fa22c4986e94ef376587e0, type: 2}
+  - {fileID: 11400000, guid: 96ecb54cf1f5ef542bb5455ca17988d3, type: 2}
+  - {fileID: 11400000, guid: 6709b81cdf210d049886eb81bab1f059, type: 2}
+  - {fileID: 11400000, guid: f4f7f530dd6efce4cb185ecd8f0d9235, type: 2}
+  - {fileID: 11400000, guid: 04273dd70c58dd945a5568cc1d1b4a34, type: 2}
+  - {fileID: 11400000, guid: 5d175cb07d4e62a4d8ed151372906a5c, type: 2}
+  - {fileID: 11400000, guid: c6787765105329b4197c376c79d32a68, type: 2}
