@@ -16,14 +16,10 @@ public class UIManager : MonoBehaviour
     private Image gameMenuBackGroundImage;
     GameObject[] pauseButtons;
 
-    [SerializeField] private GameObject rewardBox;
-    [SerializeField] private Image rewardBoxFill;
-
     [SerializeField] private TextMeshProUGUI curentLevelText, levelTimerText, currentStarsText, alignCountText, hintCountText, reshuffleCountText;
 
     public TextMeshProUGUI LevelTimerText { get { return levelTimerText; } set { value = levelTimerText; } }
     public TextMeshProUGUI CurrentStarsText { get { return currentStarsText; } set { value = currentStarsText; } }
-    public Image RewardBoxFill { get { return rewardBoxFill; } set { value = rewardBoxFill; } }
 
     public static UIManager Instance { get { return instance; } }
 
@@ -68,18 +64,6 @@ public class UIManager : MonoBehaviour
         MainMenuPanel.SetActive(true);
         GamePanel.SetActive(false);
 
-        if (GameManager.Instance != null)
-        {
-            Debug.Log("game manager is active: ");
-        }
-        else
-        {
-            Debug.Log("game manager is not yet active");
-        }
-        
-        Debug.Log("reward box fill ls: " + RewardBoxFill.fillAmount);
-
-        GameManager.Instance.RewardBoxFill(rewardBoxFill, 0.1f);
         mainMenuBackGround = GameObject.FindGameObjectWithTag("Background-MainMenu");
         mainMenuBackGroundImage = mainMenuBackGround.GetComponent<Image>();
 

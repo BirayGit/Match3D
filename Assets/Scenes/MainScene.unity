@@ -1318,18 +1318,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AspectRatio: 0
   tolerance: 0.01
---- !u!114 &466272968 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7300325964154704950, guid: 3e5bfa7e86bf51844b0541fa4b5b4223,
-    type: 3}
-  m_PrefabInstance: {fileID: 7300325965654069322}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &532420742
 GameObject:
   m_ObjectHideFlags: 0
@@ -1586,8 +1574,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoints: {fileID: 202260637}
-  rewardBox: {fileID: 987044735}
-  rewardBoxFill: {fileID: 466272968}
   curentLevelText: {fileID: 1499168719}
   levelTimerText: {fileID: 349271174}
   currentStarsText: {fileID: 30715096}
@@ -2117,12 +2103,18 @@ Transform:
   m_Father: {fileID: 202260636}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &987044735 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7365955607290344943, guid: 3e5bfa7e86bf51844b0541fa4b5b4223,
+--- !u!114 &987044736 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3083679366191452818, guid: 3e5bfa7e86bf51844b0541fa4b5b4223,
     type: 3}
   m_PrefabInstance: {fileID: 7300325965654069322}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e38608432d0efd3419e9279b7bd76e48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1081613516
 GameObject:
   m_ObjectHideFlags: 0
@@ -3258,6 +3250,7 @@ MonoBehaviour:
   currentMatchedPairs: 0
   giveScore: 0
   isWon: 0
+  rewards: {fileID: 987044736}
   matchedItemsList: []
 --- !u!1 &1360260515
 GameObject:
@@ -4933,6 +4926,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8652071788235202683, guid: b62d8e93b0a8d4b448a2b421196bcdba,
+        type: 3}
+      propertyPath: m_TagString
+      value: RewardBox
+      objectReference: {fileID: 0}
     - target: {fileID: 8652071788236819514, guid: b62d8e93b0a8d4b448a2b421196bcdba,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -4946,7 +4944,7 @@ PrefabInstance:
     - target: {fileID: 8891375752044790180, guid: b62d8e93b0a8d4b448a2b421196bcdba,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: RewardBoxFill
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b62d8e93b0a8d4b448a2b421196bcdba, type: 3}

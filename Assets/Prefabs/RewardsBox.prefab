@@ -157,6 +157,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7365955607262566830}
+  - component: {fileID: 3083679366191452818}
   m_Layer: 5
   m_Name: RewardsBox
   m_TagString: Untagged
@@ -187,6 +188,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 139.2}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3083679366191452818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7365955607290344943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e38608432d0efd3419e9279b7bd76e48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rewardBox: {fileID: 7365955607290344943}
+  rewardBoxFill: {fileID: 7300325964154704950}
 --- !u!1 &7365955607313758125
 GameObject:
   m_ObjectHideFlags: 0

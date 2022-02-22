@@ -16,8 +16,8 @@ public class GameManager : MonoBehaviour
     public bool giveScore, isWon;
     float time = 12f;
     GameObject matchedItems;
-    GameObject rewardBox;
-    Image rewardBoxFill;
+
+    [SerializeField]private Rewards rewards;
 
     [SerializeField]List<GameObject> matchedItemsList;
 
@@ -43,9 +43,6 @@ public class GameManager : MonoBehaviour
         isWon = false;
         FreshGame();
         matchedItems = GameObject.FindGameObjectWithTag("MatchedItems");
-        rewardBox = GameObject.FindGameObjectWithTag("RewardBox");
-        rewardBoxFill = rewardBox.GetComponent<Image>();
-
     }
 
     public void FreshGame()
@@ -56,7 +53,6 @@ public class GameManager : MonoBehaviour
         alignCount = 3;
         hintCount = 3;
         reshuffleCount = 3;
-        //rewardBoxFill.fillAmount = 0f;
     }
 
     public void MatchedPairs(GameObject gObj1, GameObject gObj2)
@@ -147,24 +143,6 @@ public class GameManager : MonoBehaviour
         currentStars = 0;
     }
 
-    public void BoxRewards()
-    {
-
-    }
-
-    public void RewardBoxFill(Image image, float amount)
-    {
-        if (image != null)
-        {
-            image.fillAmount = amount;
-            Debug.Log("fill changed");
-        }
-        else
-        {
-            Debug.Log("image doesnt exist");
-        }
-    }
-
     public void CheckVictory()
     {
         int spriteCount = LevelManager.Instance.usedSpritesList.Count;
@@ -174,6 +152,8 @@ public class GameManager : MonoBehaviour
             Debug.Log("level is won");
             isWon = true;
             StartCoroutine(LevelManager.Instance.LevelVictory());
+            rewards.IsLevelWon();
+            
         }
     }
     public float CurrentStars { get { return currentStars; } set { currentStars = value; } }

@@ -65,7 +65,7 @@ public class PrefabSettings : MonoBehaviour
         instantiatedItem = Instantiate(matchedItemImagePrefab, grid);
         itemImageObject = instantiatedItem.transform.GetChild(1).gameObject;
         itemImage = itemImageObject.GetComponentInChildren<Image>();
-        Debug.Log(sprite);
+        //Debug.Log(sprite);
         itemImage.sprite = sprite;
     }
 

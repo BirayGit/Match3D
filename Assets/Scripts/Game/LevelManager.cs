@@ -54,7 +54,7 @@ public class LevelManager : MonoBehaviour
 
     public SpriteTypeSO GetRandomSpriteType()
     {
-        Debug.Log(currentLevelData.spriteType[Random.Range(0, currentLevelData.spriteType.Length)]);
+        //Debug.Log(currentLevelData.spriteType[Random.Range(0, currentLevelData.spriteType.Length)]);
         return currentLevelData.spriteType[Random.Range(0, currentLevelData.spriteType.Length)];
     }
 
