@@ -16,6 +16,8 @@ public class UIManager : MonoBehaviour
     private Image gameMenuBackGroundImage;
     GameObject[] pauseButtons;
 
+    [SerializeField] private Rewards rewards;
+
     [SerializeField] private TextMeshProUGUI curentLevelText, levelTimerText, currentStarsText, alignCountText, hintCountText, reshuffleCountText;
 
     public TextMeshProUGUI LevelTimerText { get { return levelTimerText; } set { value = levelTimerText; } }
@@ -158,6 +160,7 @@ public class UIManager : MonoBehaviour
         PausePanel.SetActive(false);
         PauseThePanel();
         InteractableMenuButtons(false);
+        rewards.LevelWon();
     }
     public void OnShowPause()
     {

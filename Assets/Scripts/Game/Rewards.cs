@@ -19,7 +19,7 @@ public class Rewards : MonoBehaviour
 
     private void Start()
     {
-        currentRewardAmount = 0f;
+        
         RewardBoxFill(rewardBoxFill, currentRewardAmount);
         isLevelWon = false;
         rewardBoxes = GameObject.FindGameObjectsWithTag("RewardBox");
@@ -44,19 +44,22 @@ public class Rewards : MonoBehaviour
         Debug.Log("reward given");
     }
 
-    public void IncreaseRewardPercentage()
+    public void IncreaseRewardAmount()
+    {
+        currentRewardAmount += 0.2f;
+        CheckRewardBoxFill();
+        IncreaseRewardFill();
+    }
+
+    public void IncreaseRewardFill()
     {
         rewardBoxes = GameObject.FindGameObjectsWithTag("RewardBox");
         Debug.Log("reward boxes length inside increase reward percentage is: " + rewardBoxes.Length);
         foreach (GameObject reward in rewardBoxes)
         {
-            Debug.Log("reward boxes length in increse reward percantage is: " + rewardBoxes);
-            currentRewardAmount += 0.2f;
-            //Debug.Log("reward box is: " + rewards);
-            //rewardBoxChild = rewards.
-            //rewardBoxFill = rewards.GetComponentInChildren<Image>();
-            //Debug.Log("reward box fill + " + rewardBoxFill);
-            //RewardBoxFill(rewardBoxFill, currentRewardAmount);
+            Debug.Log("reward boxes length in increse reward percantage is: " + rewardBoxes.Length);
+            Debug.Log("current reward is: " + currentRewardAmount);
+
             Transform parent = reward.transform;
             Transform child = parent.GetChild(1);
             rewardBoxChild = child.gameObject;
@@ -76,20 +79,15 @@ public class Rewards : MonoBehaviour
     }
     public void LevelWon()
     {
-        Debug.Log("inside level won");
-        IncreaseRewardPercentage();
-        CheckRewardBoxFill();
+
+        if (GameManager.Instance.isWon)
+        {
+            Debug.Log("inside level won");
+            IncreaseRewardAmount();
+            CheckRewardBoxFill();
+        }
+
+
     }
 
-    public void IsLevelWon()
-    {
-        Debug.Log("level won is called");
-        isLevelWon = true;
-        if (isLevelWon)
-        {
-            Debug.Log("inside if");
-            LevelWon();
-            isLevelWon = false;
-        }
-    }
 }

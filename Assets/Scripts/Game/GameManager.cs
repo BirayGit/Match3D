@@ -152,7 +152,6 @@ public class GameManager : MonoBehaviour
             Debug.Log("level is won");
             isWon = true;
             StartCoroutine(LevelManager.Instance.LevelVictory());
-            rewards.IsLevelWon();
             
         }
     }

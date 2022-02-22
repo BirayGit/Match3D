@@ -1318,6 +1318,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AspectRatio: 0
   tolerance: 0.01
+--- !u!114 &487901106 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3810074842320684806, guid: b62d8e93b0a8d4b448a2b421196bcdba,
+    type: 3}
+  m_PrefabInstance: {fileID: 2173959793751960557}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e38608432d0efd3419e9279b7bd76e48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &532420742
 GameObject:
   m_ObjectHideFlags: 0
@@ -1574,6 +1586,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoints: {fileID: 202260637}
+  rewards: {fileID: 487901106}
   curentLevelText: {fileID: 1499168719}
   levelTimerText: {fileID: 349271174}
   currentStarsText: {fileID: 30715096}
